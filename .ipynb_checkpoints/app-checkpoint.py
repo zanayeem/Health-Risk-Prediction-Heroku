@@ -5,9 +5,6 @@ import pickle
 import joblib
 import logging
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
-
 app = Flask(__name__)
 model = joblib.load("health-predictor.h5")
 scaler = joblib.load("health-predictor-scaler.pkl")
@@ -33,3 +30,6 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
