@@ -17,13 +17,13 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="POST">
-    	<input type="text" name="pulse" placeholder="Pulse" required="required" />
-        <input type="text" name="blood" placeholder="BloodOxygen" required="required" />
-		<input type="text" name="temp" placeholder="Temperature" required="required" />
+    	<input type="text" name="pulse" placeholder="Pulse (BPM)" required="required" />
+        <input type="text" name="blood" placeholder="BloodOxygen (%)" required="required" />
+		<input type="text" name="temp" placeholder="Temperature (Celsius)" required="required" />
 		<input type="text" name="age" placeholder="Age" required="required" />
-		<input type="text" name="height" placeholder="Height" required="required" />
-		<input type="text" name="weight" placeholder="Weight" required="required" />
-		<input type="text" name="gender_male" placeholder="Gender_Male" required="required" />
+		<input type="text" name="height" placeholder="Height (inches)" required="required" />
+		<input type="text" name="weight" placeholder="Weight (lbs)" required="required" />
+		<input type="text" name="gender_male" placeholder="Male=1,Female =0" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
