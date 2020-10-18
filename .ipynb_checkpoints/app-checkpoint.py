@@ -20,8 +20,8 @@ def predict():
     '''
     int_features = [float(x) for x in request.form.values()]
     int_features = [np.array(int_features)]
-    final_features = scaler.transform(int_features)
-    prediction = model.predict(final_features)
+    #final_features = scaler.transform(int_features)
+    prediction = model.predict(int_features)
 
     #output = round(prediction[0], 2)
 
