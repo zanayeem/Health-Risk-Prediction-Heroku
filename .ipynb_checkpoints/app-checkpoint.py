@@ -3,8 +3,6 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 import joblib
-import logging
-import sys
 
 app = Flask(__name__)
 model = joblib.load("health-predictor.h5")
@@ -31,5 +29,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    app.logger.addHandler(logging.StreamHandler(sys.stdout))
-    app.logger.setLevel(logging.ERROR)
+    
