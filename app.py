@@ -5,8 +5,9 @@ import pickle
 import joblib
 
 app = Flask(__name__)
-model = joblib.load("health-predictor.h5")
-scaler = joblib.load("health-predictor-scaler.pkl")
+
+model = pickle.load(open("health-predictor.pkl","rb"))
+scaler = pickle.load(open("health-predictor-scaler.pkl","rb"))
 
 @app.route('/')
 def home():
