@@ -1,0 +1,55 @@
+* {
+	font-family: oswald;
+}
+
+
+body {
+	background-color: #f9f9f9;
+}
+
+.f-box {
+	perspective: 1500px;
+	-moz-perspective: 1500px;
+	height: 500px;
+	position: relative;
+
+}
+
+.f-box .f-box-side {
+	width: 100%;
+	height: 500px;
+	transition: all 1s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.f-box .f-box-side.side-front{
+	background-color: #FFF;
+}
+
+.f-box .f-box-side.side-back{
+	background-color: skyblue;
+	transform: rotateY(180deg);
+}
+
+.f-box:hover .f-box-side.side-front {
+	transform: rotateY(-180deg);
+}
+
+.f-box:hover .f-box-side.side-back {
+	transform: rotateY(0deg);
+}
+
+.f-box .f-box-side.side-front .f-box-picture {
+	background-image: linear-gradient(red, yellow), url('../media/img/82e2ae94.webp');
+	height: 230px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-blend-mode: screen;
+
+}

@@ -16,7 +16,7 @@
 	<h1>Health Risk Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
+    <form action="{{ url_for('predict')}}"method="POST">
     	<input type="text" name="pulse" placeholder="Pulse" required="required" />
         <input type="text" name="blood" placeholder="BloodOxygen" required="required" />
 		<input type="text" name="temp" placeholder="Temperature" required="required" />
