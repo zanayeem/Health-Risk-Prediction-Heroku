@@ -13,15 +13,15 @@ scaler = pickle.load(open("health-predictor-scaler.pkl","rb"))
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST','GET'])
+@app.route('/predict',methods=['POST'])
 def predict():
     '''
     For rendering results on HTML GUI
     '''
     int_features = [float(x) for x in request.form.values()]
     int_features = [np.array(int_features)]
-    #final_features = scaler.transform(int_features)
-    prediction = model.predict(int_features)
+    final_features = scaler.transform(int_features)
+    prediction = model.predict(final_features)
 
     #output = round(prediction[0], 2)
 
