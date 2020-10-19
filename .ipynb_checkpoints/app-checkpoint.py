@@ -1,10 +1,12 @@
 
 import numpy as np
 from flask import Flask, request, jsonify, render_template
+from flask_bootstrap import Bootstrap
 import pickle
 import joblib
 
 app = Flask(__name__)
+Bootstrap(app)
 
 model = pickle.load(open("health-predictor.pkl","rb"))
 scaler = pickle.load(open("health-predictor-scaler.pkl","rb"))
@@ -25,7 +27,7 @@ def predict():
 
     #output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='Your Health Prediction is {}'.format(prediction[0]))
+    return render_template('index.html', prediction_text="Your Health Prediction is '{}'".format(prediction[0]))
 
 
 if __name__ == "__main__":
