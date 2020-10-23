@@ -44,14 +44,17 @@
       </div>
       <div class="form-group row">
         <label for="inputPassword3" class="col-sm-2 col-form-label">Height</label>
-        <div class="col-sm-10">
-          <input type="number" name="height" step="0.01" class="form-control"  placeholder="(Inches)" required="required">
+        <div class="col-sm-4">
+          <input type="number" name="height_feet" max="10" min="0" step="1" class="form-control"  placeholder="(Feet)" required="required">
+        </div>
+        <div class="col-sm-6">
+          <input type="number" name="height_inches" max="11" min="0" step="1" class="form-control"  placeholder="(Inches)" required="required">
         </div>
       </div>
       <div class="form-group row">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Weight</label>
+        <label for="number" class="col-sm-2 col-form-label">Weight</label>
         <div class="col-sm-10">
-          <input type="number" step="0.0001" name="weight" class="form-control"  placeholder="(Pounds or lbs)" required="required">
+          <input type="number" step="0.0001" name="weight" class="form-control"  placeholder="(Kg)" required="required">
         </div>
       </div>
       <fieldset class="form-group">
@@ -59,9 +62,9 @@
            <label class="col-form-label col-sm-2 pt-0">Gender</label>
            <div class="col-sm-10">
              <div class="form-check form-check-inline">
-               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" checked>
-               <label class="form-check-label" for="inlineRadio1">Male</label>
-               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0">
+               <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="1" checked>
+               <label class="form-check-label" for="inlineRadio1">Male</label>  &nbsp;&nbsp;
+               <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="0">
                <label class="form-check-label" for="inlineRadio2">Female</label>
              </div>
            </div>
