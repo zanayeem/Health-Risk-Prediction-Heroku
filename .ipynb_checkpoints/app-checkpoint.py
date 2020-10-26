@@ -36,7 +36,8 @@ def predict():
     prediction = model.predict(final_features)
     #-------------------------------------------------
 
-    return render_template('index.html', prediction_text="Your Health Prediction: {}".format(prediction[0]))
+    #return render_template('index.html', prediction_text=f"Your Health Prediction: {prediction[0]}")
+    return f"Your Health Prediction: {prediction[0]} "
 
 
 if __name__ == "__main__":
