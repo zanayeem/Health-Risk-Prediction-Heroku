@@ -2,7 +2,7 @@ $(function(){
 	$('form').submit(function(event){
 		console.log("Works")
 		event.preventDefault()
-		$.ajax({  //Sends click and form info to url: /predict for processing
+		$.ajax({  //Sends form info to url: /predict for processing
 			url: '/predict',
 			data: $('form').serialize(), //processes all data in form serialwise
 			type: 'POST',
