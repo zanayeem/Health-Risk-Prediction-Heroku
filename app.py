@@ -27,9 +27,9 @@ def predict():
     height_inches = float(request.form.get('height_inches'))
     weight = float(request.form.get('weight'))*2.20462
     gender = float(request.form.get('gender'))
-    
-    height = (height_feet*12) + height_inches 
-    
+
+    height = (height_feet*12) + height_inches
+
     all_features = [pulse,blood,temp,age,height,weight,gender]
     all_features = [np.array(all_features)]
     final_features = scaler.transform(all_features)
@@ -41,5 +41,7 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
     app.config['PROPAGATE_EXCEPTIONS'] = True
+    app.run(host="0.0.0.0", port=8080)
+
